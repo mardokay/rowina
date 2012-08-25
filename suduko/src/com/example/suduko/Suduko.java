@@ -1,12 +1,15 @@
 package com.example.suduko;
-import android.content.*;
+import android.app.Activity;
+
 import android.os.Bundle;
-import android.view.*;
+import android.view.View;
+import android.content.Intent;
 import android.view.View.OnClickListener;
 public class Suduko extends Activity implements OnClickListener {
+	@Override
 public void onCreate(Bundle savedInstanceState){
 	super.onCreate(savedInstanceState);
-	setContentView(R.layout.MainActivity);
+	setContentView(R.layout.activity_main);
 	
 	View continueButton = findViewById(R.id.continue_button);
 	continueButton.setOnClickListener(this);
@@ -18,8 +21,8 @@ public void onCreate(Bundle savedInstanceState){
 	exitButton.setOnClickListener(this);
 }
 public void onClick(View v){
-switch void (v.getId()){
-case r.id.about_buttone:
+switch (v.getId()){
+case R.id.about_button:
 	Intent i=new Intent(this,About.Class);
 	startActivity(i);
 	break;
